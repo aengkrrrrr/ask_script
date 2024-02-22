@@ -1,15 +1,18 @@
-const mainMenu = document.querySelectorAll('.gnb_wrap .gnb li');
-const subMenu = document.querySelectorAll('.gnb_wrap .gnb li>.depth');
+const mainMenu = document.querySelectorAll('.gnb_wrap>ul>li a');
+const depth = document.querySelectorAll('.depth');
 
+console.log(depth);
 
+for(let mm of mainMenu){
+ mm.addEventListener('mouseenter',()=>{
+	for(let dt of depth){
+		dt.style.display='block';
+	}
+ });
+ mm.addEventListener('mouseleave',()=>{
+	for(let dt of depth){
+		dt.style.display='none';
+	}
+ });
 
-
-
-for(let sub of subMenu){
-  sub.style.display = 'none';
-  for(let menu of mainMenu) {
-    menu.addEventListener('mouseenter',()=>{
-      sub.style.display= 'block';
-    });
-  }
 }

@@ -79,7 +79,6 @@ span {
 .header_ct {
   background: var(--subcol);
   padding: 0 var(--mainpd);
-  /* height: 88px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -91,12 +90,12 @@ span {
 }
 .gnb>li>a  {
   font-size: var(--subtit);
+  line-height: var(--subtit);
   text-transform: uppercase;
   font-weight: 500;
+  display: inline-block;
 }
-/* .gnb>li:hover .depth{
-  display: block;  
-} */
+
 .gnb .depth {
   position: absolute;
   left: 0;
@@ -106,23 +105,18 @@ span {
   width: 1920px;
   height: 411px;
   background: var(--white);
-  z-index: 1;
+  display: none;
 }
 .gnb .depth img {
   padding-right: 22px;
 }
-/* .gnb .depth:last-child {
-  z-index: -10;
-  padding-top: 10px;
-} */
-
 .gnb .depth02 {
   padding-top: 40px;
   width: 100px;
 }
-.gnb .depth02 a {
+.gnb .depth02>li>a {
   color: var(--subcol);
-  transition: all 0.3s;
+  /* transition: all 0.3s; */
 }
 .gnb .depth02 li:first-child {
   font-size: var(--subtit);
@@ -136,12 +130,6 @@ span {
 }
 .gnb .depth02 li:not(:nth-of-type(1)):hover a{
   color: var(--maincol);
-}
-.gnb .depth.fn {
-  width: 100%;
-  padding: 0;
-  display: flex;
-  justify-content: space-between;
 }
 .gnb .depth.fn .depth02 {
   display: flex;
@@ -176,5 +164,6 @@ input:focus {
   font-size: 30px;
   color: var(--white);
 }
+
 
 
